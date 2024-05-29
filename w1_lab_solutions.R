@@ -1,5 +1,5 @@
 # 1
-
+install.packages('readxl')
 library('readxl')
 
 
@@ -57,6 +57,9 @@ plot(Return_fit)
 
 
 
+
+
+
 # 2
 
 #a)
@@ -73,6 +76,9 @@ Houses_summary <- summary(Houses_fit)
 # price of all homes in Arlington.  
 
 #c)
+
+
+
 
 
 # 3
