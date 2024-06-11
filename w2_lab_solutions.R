@@ -25,6 +25,13 @@ IceCream <-  read_excel("jaggia_ba_2e_ch08_data.xlsx", sheet="IceCream")
 IceCream_Train <- IceCream[1:24,]
 IceCream_Valid <- IceCream[25:35,] 
 
+# OR RANDOM SAMPLING
+
+# Sample numbers from 1 to number of observations without replacement such that 70% of all numbers are selected
+split <- sample(1:nrow(IceCream), nrow(IceCream) * 0.7, replace = F)
+IceCream_Train <- IceCream[split,]
+IceCream_Valid <- IceCream[-split,] 
+
 # MODEL 1
 
 Model1 <- lm(Income ~ Hours + Hot + Holiday, data = IceCream_Train) 
